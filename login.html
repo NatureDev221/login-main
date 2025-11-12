@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Login Page</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('mybackground.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .login-box {
+    background: rgba(255, 255, 255, 0.17);
+    backdrop-filter: blur(16px);
+    border-radius: 16px;
+    padding: 18px 14px;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.30);
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(60px);
+    animation: fadeSlideIn 1.2s cubic-bezier(.77,0,.18,1) forwards;
+  }
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .login-box h2 {
+    margin-bottom: 14px;
+    font-size: 1.5rem;
+    color: #111;
+    font-weight: 700;
+  }
+  .login-box input[type="email"],
+  .login-box input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 0 0 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s;
+  }
+  .login-box input[type="email"]:focus,
+  .login-box input[type="password"]:focus {
+    outline: none;
+    border: 2px solid #4CAF50;
+    box-shadow: 0 0 8px #4CAF5040;
+  }
+  .login-box button {
+    width: 100%;
+    padding: 9px 0;
+    margin: 0 0 8px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.98rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    transition: transform 0.18s cubic-bezier(.77,0,.18,1), box-shadow 0.15s;
+  }
+  .login-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .google-btn {
+    background-color: #dd4b39;
+    color: white;
+  }
+  .facebook-btn {
+    background-color: #3b5998;
+    color: white;
+  }
+  .github-btn {
+    background-color: #222;
+    color: white;
+  }
+  .social-btns button {
+    margin-bottom: 5px;
+  }
+  .login-box button:hover, .login-box button:focus {
+    transform: scale(1.04);
+    box-shadow: 0 4px 16px rgba(60,60,60,0.17);
+    outline: none;
+  }
+</style>
+</head>
+<body>
+<div class="login-box">
+  <h2>Login</h2>
+  <form>
+    <input type="email" placeholder="Email" required />
+    <input type="password" placeholder="Password" required />
+    <button type="submit" class="login-btn">Login</button>
+  </form>
+  <p>Or sign up with</p>
+  <div class="social-btns">
+    <button class="google-btn" onclick="googleSignIn()">Sign up with Google</button>
+    <button class="facebook-btn" onclick="facebookSignIn()">Sign up with Facebook</button>
+    <button class="github-btn" onclick="githubSignIn()">Sign up with GitHub</button>
+  </div>
+</div>
+<script>
+  function googleSignIn() { alert('Google sign-in flow would start here.'); }
+  function facebookSignIn() { alert('Facebook sign-in flow would start here.'); }
+  function githubSignIn() { alert('GitHub sign-in flow would start here.'); }
+</script>
+</body>
+</html>
